@@ -13,7 +13,9 @@
         @include('partials.card')
     </div>
     <div class="text-center mt-2">
-        <span class="text-uppercase load-more ">load more</span>
+        <span class="text-uppercase load-more ">
+            <a href="{{route('comics.create')}}">load more</a>
+        </span>
     </div>
 </div>
 

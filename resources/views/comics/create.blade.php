@@ -9,20 +9,20 @@
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
-            <input type="text" class="form-control" id="title" name="title">
+            <input type="text" class="form-control" id="title" name="title" required>
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <textarea id="description" class="form-control"  name="description" cols="30" rows="10"></textarea>
+            <textarea id="description" class="form-control"  name="description" cols="30" rows="10" required></textarea>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Url immagine</label>
-            <input type="text" class="form-control" id="image" name="image">
+            <input type="text" class="form-control" id="image" name="image" required>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input type="text" class="form-control w-50" id="price" name="price" >
+            <input type="text" class="form-control w-50" id="price" name="price" required>
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Aggiungere la nome della serie</label>
