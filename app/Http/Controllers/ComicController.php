@@ -13,9 +13,7 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        $nav_links = config('nav');
-        $footer_nav = config('footer_links');
-        return view("comics.index", compact("comics","nav_links","footer_nav"));
+        return view("comics.index", compact("comics"));
     }
 
     /**
@@ -23,7 +21,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view("comics.create");
     }
 
     /**
@@ -39,9 +37,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        $nav_links = config('nav');
-        $footer_nav = config('footer_links');
-        return view("comics.show", compact("comic","nav_links","footer_nav"));
+        return view("comics.show", compact("comic"));
     }
 
     /**
@@ -49,7 +45,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view("comics.edit");
     }
 
     /**

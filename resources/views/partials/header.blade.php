@@ -6,9 +6,9 @@
         <div id="nav-header">
             <ul class="d-flex">
                 <li>
-                    @foreach($nav_links as $item)
+                    @foreach($nav_links as $key=>$value )
                         <a href="#" class="text-uppercase after ps-2">
-                            {{$item}}
+                            {{$value}}
                         </a>
                     @endforeach
                 </li>

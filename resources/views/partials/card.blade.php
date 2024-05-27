@@ -6,6 +6,9 @@
                 <a href="{{route('comics.show', $item->id)}}">
                     {{$item->title}}
                 </a>
+                <a href="{{route('comics.edit', $item->id)}}" class="btn btn-primary">
+                    Modifica
+                </a>
             </h5>
         </div>
     </div>
