@@ -1,0 +1,107 @@
+@use './partials/variables' as *;
+@import '~bootstrap/scss/bootstrap';
+
+$fa-font-path: "../webfonts" !default;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+header {
+    background-color: $backgroundHeader;
+    padding: 10px;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px; 
+    }
+
+    li {
+        font-size: 0.9rem;
+        
+    }
+
+    a {
+        color: black;
+        font-weight: 500;
+        text-decoration: none;
+        position: relative; 
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 61px;
+        width: 100%;
+        height: 3px;
+        background-color: $backgroundFooterTop;
+        visibility: hidden; 
+        
+    }
+
+    a:hover::after {
+        visibility: visible; 
+        transform: scaleX(1);
+    }
+}
+
+#jumbo {
+    background-image: url('/resources/img/jumbotron.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 100%;
+}
+// MAIN 
+main {
+    background-color: $backgroundMain;
+    color: white;
+    img{
+        max-height: 350px;
+        transition: 0.5s;
+    &:hover{
+        opacity: 0.6;
+        }
+    }
+}
+
+.load-more{
+    font-size: large;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: $backgroundFooterTop;
+    transition: 0.5s;
+    &:hover{
+    color: $backgroundFooterTop;
+        background-color: white;
+    }
+}
+
+.series{
+    width: 250px;
+    padding: 6px 10px;
+    background-color: $backgroundFooterTop;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    &:hover{
+    color: $backgroundFooterTop;
+        background-color: white;
+    }
+}
+
+#footer-top{
+    background-color: $backgroundFooterTop;
+    padding: 40px 0;
+    img{
+        width: 40px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
