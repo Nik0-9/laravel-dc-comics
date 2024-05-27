@@ -1,7 +1,10 @@
 <?php
 
+use App\Models\Comic;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ComicController;
+
 
 
 /*
@@ -17,10 +20,4 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
-Route::get('/fumetti', function () {
-    $nav_links = config('nav');
-    $comics = config('comics');
-    $footer_nav = config('footer_links');
-    return view('detail', compact('nav_links','comics','footer_nav'));
-
-});
+Route::get('/fumetti', [ComicController::class,'index'])->name('comics.index');
