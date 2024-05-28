@@ -3,7 +3,10 @@
 @section('title', 'Modifica')
 
 @section('main')
-<section class="container">
+<section class="container ">
+    <h3 class="text-uppercase back-to text-center">
+        <a href="{{route('comics.show', $comic->id)}}">Back to list</a>
+    </h3>
     <h2 class="text-center">Modifica il fumetto</h2>
     <form action="{{route('comics.update', $comic->id)}}" method="POST">
         @csrf
@@ -16,7 +19,8 @@
 
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <textarea id="description" class="form-control" name="description" cols="30" rows="10" >{{$comic->description}}</textarea>
+            <textarea id="description" class="form-control" name="description" cols="30"
+                rows="10">{{$comic->description}}</textarea>
         </div>
 
         <div class="mb-3">
@@ -33,13 +37,15 @@
         </div>
         <div>
             <label for="type" class="form-label">Tipo</label>
-            <select name="type" id="type" class="form-label"value="{{$comic->type}}">
+            <select name="type" id="type" class="form-label" value="{{$comic->type}}">
                 <option value="comic book">Comic book</option>
                 <option value="grapich novel">Grapich novel</option>
             </select>
         </div>
-    <button type="submit" class="btn btn-primary">Carica</button>
-    <button type="reset" class="btn btn-secondary">Svuota campi</button>
+        <div class="pb-4 ">
+            <button type="submit" class="btn btn-primary">Carica</button>
+            <button type="reset" class="btn btn-secondary">Svuota campi</button>
+        </div>
 
     </form>
 </section>

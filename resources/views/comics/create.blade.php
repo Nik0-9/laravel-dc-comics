@@ -25,18 +25,18 @@
             <input type="text" class="form-control w-50" id="price" name="price" required>
         </div>
         <div class="mb-3">
-            <label for="series" class="form-label">Aggiungere la nome della serie</label>
+            <label for="series" class="form-label">Nome serie</label>
             <input type="text" class="form-control w-50" id="series" name="series" >
         </div>
-        <div>
+        <div class="mb-3">
             <label for="type" class="form-label">Tipo</label>
-            <select name="type" id="type" class="form-label">
+            <select name="type" id="type" class="form-label ">
                 <option value="comic book">Comic book</option>
                 <option value="grapich novel">Grapich novel</option>
             </select>
         </div>
-    <button type="submit" class="btn btn-primary">Crea</button>
-    <button type="reset" class="btn btn-secondary">Svuota campi</button>
+    <button type="submit" class="btn btn-primary pb-4">Crea</button>
+    <button type="reset" class="btn btn-secondary ">Svuota campi</button>
 
     </form>
 </section>

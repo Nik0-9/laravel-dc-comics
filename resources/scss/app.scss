@@ -14,6 +14,10 @@ header {
     background-color: $backgroundHeader;
     padding: 10px;
 
+    img:hover{
+        transform: scale(1.2);
+    }
+
     ul {
         list-style: none;
         margin: 0;
@@ -72,6 +76,44 @@ main {
     }
 }
 
+.series{
+    width: 250px;
+    padding: 6px 10px;
+    background-color: $backgroundFooterTop;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    
+    a{
+    color: $backgroundHeader;
+    }
+    &:hover{
+        color: $backgroundFooterTop;
+        background-color: $backgroundHeader;
+    a{
+        color: $backgroundFooterTop;
+    }
+    }
+}
+
+.back-to{
+    width: 250px;
+    padding: 6px 10px;
+    background-color: $backgroundFooterTop;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    
+    a{
+    color: $backgroundHeader;
+    }
+    &:hover{
+        color: $backgroundFooterTop;
+        background-color: $backgroundHeader;
+    a{
+        color: $backgroundFooterTop;
+    }
+    }
+}
+
 .load-more{
     font-size: large;
     margin: 0 auto;
@@ -89,23 +131,6 @@ main {
     }
 }
 
-.series{
-    width: 250px;
-    padding: 6px 10px;
-    background-color: $backgroundFooterTop;
-    transform: translateY(-100%);
-    transition: 0.5s;
-    a{
-    color: $backgroundHeader;
-    }
-    &:hover{
-        color: $backgroundFooterTop;
-        background-color: $backgroundHeader;
-    a{
-        color: $backgroundFooterTop;
-    }
-    }
-}
 
 #footer-top{
     background-color: $backgroundFooterTop;

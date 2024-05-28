@@ -9,8 +9,10 @@ const searchForm = document.getElementById("search-form");
 if (searchForm) {
     const searchSelect = document.getElementById("search");
     searchSelect.addEventListener("change", () => {
-        if (searchSelect.value !== "all") {
+        if (searchSelect.value !== "") {
             searchForm.submit();
         }
     });
 }
+
+
