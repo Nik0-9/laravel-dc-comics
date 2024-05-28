@@ -9,7 +9,15 @@
             current series
         </h3>
     </div>
-    <div class="row ">
+    <form action="{{route('comics.index')}}" method="GET" id="search-form">
+        <select name="search" id="search" class="form-control w-25 mb-3">
+            <option value="">Tutti</option>
+            <option value="comic book">Comic book</option>
+            <option value="graphic novel">Graphic novel</option>
+        </select>
+        <button class="btn btn-secondary" type="submit">Cerca</button>
+    </form>
+        <div class="row ">
         @include('partials.card')
     </div>
     <div class="text-center mt-2">
