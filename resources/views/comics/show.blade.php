@@ -20,17 +20,28 @@
         </div>
     </div>
     <div class="mx-auto">
-            {{$comic->description}}
+        {{$comic->description}}
     </div>
     <div class="d-flex">
-        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary m-3">
+        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary ">
             Modifica
         </a>
-        <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <input type="submit" value="Rimuovi" class="btn btn-danger m-3">
-        </form>
+        <button type="button" class="btn btn-danger mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Elimina
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">
+                            Sei davvero sicuro di voler rimuovere questi dati?
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

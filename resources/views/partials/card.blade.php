@@ -15,11 +15,6 @@
             <a href="{{route('comics.edit', $item->id)}}" class="btn btn-primary">
                 Modifica
             </a>
-            <form action="{{route('comics.destroy', $item->id)}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <input type="submit" value="Rimuovi" class="btn btn-danger">
-            </form>
             </div>
         </div>
     </div>

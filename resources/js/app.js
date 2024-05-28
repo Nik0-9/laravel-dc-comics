@@ -15,4 +15,8 @@ if (searchForm) {
     });
 }
 
+const deleteButton = document.getElementById('comicDelete');
+deleteButton.addEventListner('click',(e)=>{
+    e.preventDefault();
+});
 

@@ -14,7 +14,7 @@
 
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <textarea id="description" class="form-control"  name="description" cols="30" rows="10" required></textarea>
+            <textarea id="description" class="form-control" name="description" cols="30" rows="10" required></textarea>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Url immagine</label>
@@ -26,7 +26,7 @@
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Nome serie</label>
-            <input type="text" class="form-control w-50" id="series" name="series" >
+            <input type="text" class="form-control w-50" id="series" name="series">
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Tipo</label>
@@ -35,8 +35,11 @@
                 <option value="grapich novel">Grapich novel</option>
             </select>
         </div>
-    <button type="submit" class="btn btn-primary pb-4">Crea</button>
-    <button type="reset" class="btn btn-secondary ">Svuota campi</button>
+        <div class="pb-5">
+
+            <button type="submit" class="btn btn-primary ">Crea</button>
+            <button type="reset" class="btn btn-secondary ">Svuota campi</button>
+        </div>
 
     </form>
 </section>
