@@ -82,8 +82,10 @@ main {
         color: $backgroundHeader;
     }
     &:hover{
-    color: $backgroundFooterTop;
-        background-color: white;
+    background-color: $backgroundHeader;
+    a{
+        color:$backgroundFooterTop;
+    }
     }
 }
 
@@ -93,9 +95,15 @@ main {
     background-color: $backgroundFooterTop;
     transform: translateY(-100%);
     transition: 0.5s;
+    a{
+    color: $backgroundHeader;
+    }
     &:hover{
-    color: $backgroundFooterTop;
-        background-color: white;
+        color: $backgroundFooterTop;
+        background-color: $backgroundHeader;
+    a{
+        color: $backgroundFooterTop;
+    }
     }
 }
 

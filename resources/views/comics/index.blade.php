@@ -15,7 +15,7 @@
             <option value="comic book">Comic book</option>
             <option value="graphic novel">Graphic novel</option>
         </select>
-        <button class="btn btn-secondary" type="submit">Cerca</button>
+        <button class="btn btn-secondary mb-3" type="submit">Cerca</button>
     </form>
         <div class="row ">
         @include('partials.card')
