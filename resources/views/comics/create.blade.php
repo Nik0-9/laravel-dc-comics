@@ -5,25 +5,41 @@
 @section('main')
 <section class="container">
     <h2 class="text-center">Aggiungi fumetto</h2>
+    
     <form action="{{route('comics.store')}}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
-            <input type="text" class="form-control" id="title" name="title" required>
+            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title">
+            @error('title')
+            <div class="alert alert-danger">{{$message}}</div>
+            @enderror
+            <div id="titleHelp" class="form-text text-white">Inserire minimo 3 caratteri</div>
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <textarea id="description" class="form-control" name="description" cols="30" rows="10" required></textarea>
+            <textarea id="description" class="form-control @error('title') is-invalid @enderror" name="description" cols="30" rows="10"></textarea>
+            @error('description')
+            <div class="alert alert-danger">{{$message}}</div>
+            @enderror
+            <div id="titleHelp" class="form-text text-white">Inserire minimo 10 caratteri</div>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Url immagine</label>
-            <input type="text" class="form-control" id="image" name="image" required>
+            <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+            @error('image')
+            <div class="alert alert-danger">{{$message}}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input type="text" class="form-control w-50" id="price" name="price" required>
+            <input type="text" class="form-control w-50 @error('price') is-invalid @enderror" id="price" name="price" >
+            @error('image')
+            <div class="alert alert-danger">{{$message}}</div>
+            @enderror
         </div>
+        
         <div class="mb-3">
             <label for="series" class="form-label">Nome serie</label>
             <input type="text" class="form-control w-50" id="series" name="series">
