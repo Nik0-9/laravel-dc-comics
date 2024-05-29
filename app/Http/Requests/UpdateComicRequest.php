@@ -11,7 +11,7 @@ class UpdateComicRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class UpdateComicRequest extends FormRequest
             'price' => 'required|min:4'
         ];
     }
-    public function message(){
+    public function messages(){
         return[
             'title.required'=> 'Questo campo è obbligatorio',
             'title.max'=> 'Il campo deve avere massimo :max caratteri',
