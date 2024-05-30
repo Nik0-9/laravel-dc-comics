@@ -14,7 +14,7 @@
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
-                value="{{old('title')}}">
+                value="{{old('title')}}"  minlength="3" maxlength="255">
             @error('title')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -24,7 +24,7 @@
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
             <textarea id="description" class="form-control @error('title') is-invalid @enderror" name="description"
-                cols="30" rows="10">{{old('description')}}</textarea>
+                cols="30" rows="10"  minlength="10">{{old('description')}}</textarea>
             @error('description')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -33,23 +33,23 @@
         <div class="mb-3">
             <label for="image" class="form-label">Url immagine</label>
             <input type="text" class="form-control @error('image') is-invalid @enderror" id="image" name="image"
-                value="{{old('image')}}">
+                value="{{old('image')}}"  maxlength="255">
             @error('image')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
-            <input type="text" class="form-control w-50 @error('price') is-invalid @enderror" id="price" name="price"
-                value="{{old('price')}}">
-            @error('image')
+            <input type="text" class="form-control w-50 @error('price') is-invalid @enderror" id="price" name="price" value="{{old('price')}}"  minlength="4">
+            <div id="titleHelp" class="form-text text-white">Inserire minimo 4 caratteri</div>
+            @error('price')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
         </div>
 
         <div class="mb-3">
             <label for="series" class="form-label">Nome serie</label>
-            <input type="text" class="form-control w-50" id="series" name="series">
+            <input type="text" class="form-control w-50" id="series" name="series" >
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Tipo</label>
